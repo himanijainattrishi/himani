@@ -1,9 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>HOME PAGE</title>
-<meta name="viewport content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <style type="text/css">
 .carousel{
     background: #2f4357;
@@ -15,35 +18,9 @@
 .bs-example{
 	margin: 20px;
 }
-.navbar{
-background-color=#282828;
-}
-
 </style>
 </head>
 <body>
-<div class="container">
-
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="http://localhost:8080/musichub/index.jsp">MusicHub</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.jsp">Home</a></li>
-      <li><a href="AboutUs.jsp">About Us</a></li>
-      <li><a href="ContactUs.jsp">Contact Us</a></li>
-      <li><a href="More.jsp">More</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class="row">
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Carousel indicators -->
@@ -73,28 +50,5 @@ background-color=#282828;
         </a>
     </div>
 </div>
-</div>
-
-<nav class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container-fluid">
-    
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="AboutUs.jsp">About Us</a></li>
-      <li><a href="ContactUs.jsp">Contact Us</a></li>
-      <li><a href="More.jsp">Page 3</a></li>
-    </ul>
-    </div>
-    </nav>
-
-
-
-</div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- <script src="bootstrap/js/bootstrap.min.js"></script>
-
- 
 </body>
-</html>
+</html>                                		
