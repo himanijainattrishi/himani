@@ -59,10 +59,6 @@ input[type="password"] {
  border-top-right-radius: 0;
 }
 }
-
-
-
-
 </style>
 </head>
 <body>

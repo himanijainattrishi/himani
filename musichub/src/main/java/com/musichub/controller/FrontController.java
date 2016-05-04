@@ -32,6 +32,20 @@ public class FrontController {
 				  ModelAndView model=new ModelAndView("Register");
 				  return model;
 			  }
+	  @RequestMapping("/Pproduct")
+	  public ModelAndView getproduct()
+	  {
+		  
+		  ModelAndView model=new ModelAndView("Pproduct");
+		  return model;
+	  }
+	  @RequestMapping("/search")
+	  public ModelAndView search()
+	  {
+		  
+		  ModelAndView model=new ModelAndView("search");
+		  return model;
+	  }
 			
 	
 }
