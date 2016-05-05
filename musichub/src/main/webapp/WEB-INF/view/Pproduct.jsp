@@ -1,3 +1,4 @@
+<%@page isELIgnored="false" %>
 <html>
 <head>
 <title>HOME PAGE</title>
@@ -17,6 +18,7 @@
                            {ID:"3",NAME:"DRUM",BRAND:"CAJON",PRICE:"5939"}];
                          
              $scope.prod=products;
+             $scope.data=${access};
                     });
 
 
@@ -58,7 +60,6 @@ width:20px;
 </style>
 
 <body ng-app="searchApp">
-
 
 
 
@@ -106,12 +107,6 @@ width:20px;
   </div>
 
 
-
-
-
-
-
-
 <div class="row">
 <div class="col-sm-4">
 </div>
@@ -128,12 +123,13 @@ width:20px;
             </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="p in prod | filter:searchText">
-    <td>{{p.ID}}</td>
-    <td>{{p.NAME}}</td>
-    <td>{{p.BRAND}}</td>
+        <tr ng-repeat="p in data | filter:searchText">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.Brand}}</td>
   
-    <td>{{p.PRICE}}</td>
+    <td>{{p.price}}</td>
+    <td><a href="productdetails">more....</a></td>
    
     </tr>
         
@@ -143,7 +139,7 @@ width:20px;
         </tbody>
     </table>
 </div>
-<div class="col-sm-2"></div>
+<div class="col-sm-2"><a href="a">ffff</a></div>
 </div>
 </div>
 </div>
