@@ -12,12 +12,23 @@ import com.musichub.model.Product;
 public class ProductService {
 	@Autowired
 	ProductDaoImp p;
+	public ProductService()
+	{
+		p=new ProductDaoImp();
+	}
 	
 	
 	public List<Product> getAllProducts()
 	{
-		p=new ProductDaoImp();
+		
 		return p.getAllProduct();
+	}
+	
+	
+	public boolean addRow(String name,String brand,int price)
+	{
+		p.addProduct(name,brand,price);
+		return true;
 	}
 	
 	  

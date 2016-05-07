@@ -1,4 +1,5 @@
 <%@page isELIgnored="false" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
 <title>HOME PAGE</title>
@@ -9,6 +10,7 @@
 
 
 <script>
+var data;
       
       var app=angular.module("searchApp",[]).controller("TableCtrl",function($scope)
                     {
@@ -112,6 +114,7 @@ width:20px;
 </div>
 <div class="col-sm-6">
 <div class="table-responsive"> 
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -129,16 +132,22 @@ width:20px;
     <td>{{p.Brand}}</td>
   
     <td>{{p.price}}</td>
-    <td><a href="productdetails">more....</a></td>
+  <td>
+       
    
-    </tr>
-        
-        
-          
-            </div>
-        </tbody>
-    </table>
+    <form action="productdetails" method="post">
+   <input type="hidden" value={{p.id}} name="id"/>
+       <input type="hidden" value={{p.name}} name="name"/>
+       <input type="hidden" value={{p.Brand}} name="Brand"/>
+     
+        <input type="submit" value="more"></form></td>
+</tr>
+</tbody>
+ </table>
 </div>
+  </div>
+        
+       
 <div class="col-sm-2"><a href="a">ffff</a></div>
 </div>
 </div>
@@ -149,7 +158,7 @@ width:20px;
 
 
 
-
+ 
 
 <nav>
   <a href="/html/">HTML</a> |

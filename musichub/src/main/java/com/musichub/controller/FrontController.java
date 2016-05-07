@@ -3,12 +3,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.musichub.model.Product;
 import com.musichub.service.ProductService;
+
+
 
 @Controller
 public class FrontController {
@@ -38,28 +41,33 @@ public class FrontController {
 				  ModelAndView model=new ModelAndView("Register");
 				  return model;
 			  }
+	  
+	  
 	  @RequestMapping("/Pproduct")
 	  public ModelAndView getproduct()
-	  {
-		  Gson gson = new Gson();
-		  ModelAndView mv=new ModelAndView("Pproduct");
-		  ser=new ProductService();
-		 List<Product> list=ser.getAllProducts();
+	  { 
+		  //ser.addRow("himani","brand6",2000);
+	    ModelAndView mv=new ModelAndView("Pproduct");
+		  
+Gson gson = new Gson();
+		 
+		// ser=new ProductService();
+		List<Product> list=ser.getAllProducts();
 		
-	       String json = new Gson().toJson(list );
+	     String json = new Gson().toJson(list );
 	      System.out.println("json values is" +json);
 	      
 	     mv.addObject("access",json);
-		  return mv; 
+	     return mv; 
 	  }
 	  @RequestMapping("/productdetails")
-	  public ModelAndView productdetails()
+	  public ModelAndView productdetails(@ModelAttribute("product") Product product) 
 	  {
-		  
+		 
 		  
 		  ModelAndView model=new ModelAndView("productdetails");
-		model.addObject("m","this is my first");
-		
+		//model.addObject("m","this is my first");
+		System.out.println(product.getId());
 		  return model;
 	  }
 	  @RequestMapping("/a")

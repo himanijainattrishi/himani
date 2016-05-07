@@ -24,7 +24,7 @@ xmlns:context="http://www.springframework.org/schema/context"
  <mvc:resources mapping="/resource/images/**" location="/resource/images/" />
  <mvc:resources mapping="/resource/bootstrap/fonts/**" location="/resource/bootstrap/fonts/" />
   -->
-  <mvc:annotation-driven/>
+ <mvc:annotation-driven/>
  <mvc:default-servlet-handler/>
   
    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
